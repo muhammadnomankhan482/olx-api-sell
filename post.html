@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Create Post - OLX Clone</title>
+  <link rel="stylesheet" href="post.css">
+</head>
+
+<body>
+  <div class="header">
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="olx.png" alt="OLX Logo" height="40" width="70"></a>
+        <span>Create Ad</span>
+      </div>
+    </header>
+  </div>
+
+  <div class="container" style="max-width:600px; margin:50px auto;">
+    <h2>Create a New Ad</h2>
+    <form id="postForm">
+      <label>Title</label>
+      <input id="title" required><br><br>
+
+      <label>Description</label>
+      <textarea id="desc" required></textarea><br><br>
+
+      <label>Category</label>
+      <select id="category">
+        <option value="Mobile">Mobile</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Bike">Bike</option>
+        <option value="Property">Property</option>
+      </select><br><br>
+
+      <label>Price (Rs)</label>
+      <input id="price" type="number" required><br><br>
+
+      <label>Image URL</label>
+      <input id="image" type="url" placeholder="https://example.com/img.jpg"><br><br>
+
+      <button type="button" onclick="savePost()">Post Ad</button>
+    </form>
+      <button id="back" onclick="history.back();">Go back</button>
+    <div id="info"></div>
+  </div>
+
+  <script src="post.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OLX Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="olxContainer">
+    <div class="header">
+      <header>
+        <div class="logo">
+          <div><img src="olx.png" alt="OLX Logo" height="40" width="70"></div>
+          <div class="car"> Motors</div>
+          <div class="car">Property</div>
+        </div>
+        <div class="input">
+          <button id="logoutBtn" onclick="logout()" style="display: none;">Logout</button>
+          <button id="loginBtn" onclick="showContainer()">Login</button>
+          <svg id="information" onclick="information()" style="display: none; width: 25px;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 11V17H13V11H11ZM11 7V9H13V7H11Z">
+            </path>
+          </svg>
+          <button class="sell" disabled id="sellBtn" onclick="sellBtn()">+SELL</button>
+        </div>
+      </header>
+
+      <div class="headertwo">
+        <div class="select">
+          <div class="map"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+              class="size-7">
+              <path fill-rule="evenodd"
+                d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                clip-rule="evenodd" />
+            </svg></div>
+          <select id="selet">
+            <option>Pakistan</option>
+            <option>India</option>
+            <option>Bangladesh</option>
+          </select>
+        </div>
+        <div class="search">
+          <input type="search" class="button" placeholder="Find Cars, Mobile, Phones and more...">
+          <button id="button">🔍 Search</button>
+        </div>
+      </div>
+    </div>
+
+    <ul class="categories">
+      <li><select id="categore">
+          <option>All Categories</option>
+          <option>Car</option>
+          <option>House</option>
+        </select></li>
+      <li>Mobile Phones</li>
+      <li>Cars</li>
+      <li>Motorcycles</li>
+      <li>Houses</li>
+      <li>Video-Audios</li>
+      <li>Tablets</li>
+      <li>Land & Plots</li>
+    </ul>
+
+    <h2>Mobiles</h2>
+    <div id="mobiles" class="container"></div>
+
+    <h2>Laptop's</h2>
+    <div id="laptops" class="container"></div>
+
+    <h2>Bikes</h2>
+    <div id="bikes" class="container"></div>
+
+    <h2>Properties</h2>
+    <div id="properties" class="container"></div>
+
+    <div class="download">
+      <div class="p-7">
+        <img src="https://www.olx.com.pk/assets/olx-mobile-app.dfa5b83f01c6e269aca19a3faff716a6.webp" alt="">
+      </div>
+      <div class="p-8">
+        <div class="p-9"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSexNy2zHUz8x7J24AnD-zcd2bUaAt7nLFYg&s" alt="">
+        </div>
+        <div class="p-9"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmQf_lqQrYSqseBgjkYL7vFP6T8qi78tWBww&s" alt="">
+        </div>
+        <div class="p-9"><img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-xr13yNtYuVnn_qJ-cjViGPBB8sedX18O2g&s" alt="">
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <footer>
+      <div>
+        <p><b>Popular Categories</b></p>
+        <p>Cars</p>
+        <p>Flats for rent</p>
+        <p>Mobile Phones</p>
+        <p>Jobs</p>
+      </div>
+      <div>
+        <p><b>Trending Searches</b></p>
+        <p>Bikes</p>
+        <p>Watches</p>
+        <p>Books</p>
+        <p>Dogs</p>
+      </div>
+      <div>
+        <p><b>About Us</b></p>
+        <p>About Dubizzle Group</p>
+        <p>OLX Blog</p>
+        <p>Contact Us</p>
+        <p>OLX for Businesses</p>
+      </div>
+      <div>
+        <p><b>OLX</b></p>
+        <p>Help</p>
+        <p>Sitemap</p>
+        <p>Terms of Use</p>
+        <p>Privacy Policy</p>
+      </div>
+      <div>
+        <p><b>Follow Us</b></p>
+        <div class="png">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+              <path
+                d="M 11 4 C 7.134 4 4 7.134 4 11 L 4 39 C 4 42.866 7.134 46 11 46 L 39 46 C 42.866 46 46 42.866 46 39 L 46 11 C 46 7.134 42.866 4 39 4 L 11 4 z M 13.085938 13 L 21.023438 13 L 26.660156 21.009766 L 33.5 13 L 36 13 L 27.789062 22.613281 L 37.914062 37 L 29.978516 37 L 23.4375 27.707031 L 15.5 37 L 13 37 L 22.308594 26.103516 L 13.085938 13 z M 16.914062 15 L 31.021484 35 L 34.085938 35 L 19.978516 15 L 16.914062 15 z">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+              <path
+                d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+              <path
+                d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z">
+              </path>
+            </svg>
+          </div>
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+              <path
+                d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z">
+              </path>
+            </svg>
+          </div>
+        </div>
+
+    </footer>
+
+    <div class="classified">
+      <div><b>Classifieds in Pakistan.</b> 2006-2025 OLX</div>
+    </div>
+
+    <a href="" id="top" class="top">Back to top</a>
+  </div>
+  <!-- login -->
+  <div id="container" style="display: none;">
+    <div id="loginContainer">
+      <h1>OLX App</h1>
+      <h1>Log In</h1>
+      <form onsubmit="login(event)">
+        <input type="email" placeholder="Enter your Email" required id="loginEmail"><br><br>
+        <input type="password" placeholder="Enter your Password" required id="loginPassword"><br><br>
+        <input type="submit" value="Log In" id="logIn">
+        <p id="loginMessage"></p>
+      </form>
+      <button id="back" onclick="goBack()">Go back</button>
+      <a href="" onclick="showSignup(event)">Don't have an account? Sign Up</a>
+    </div>
+
+    <div id="signupContainer" style="display: none;">
+      <h1>OLX App</h1>
+      <h1>Sign Up</h1>
+      <form onsubmit="details(event)">
+        <input type="text" placeholder="Enter your First Name" required id="firstName"><br><br>
+        <input type="text" placeholder="Enter your Last Name" required id="lastName"><br><br>
+        <input type="email" placeholder="Enter your Email" required id="email"><br><br>
+        <input type="password" placeholder="Enter your Password" required id="password"><br><br>
+        <input type="submit" value="Sign Up" id="submit">
+      </form>
+      <p id="message"></p>
+      <a href="" onclick="showLogin(event)">Already have an account? Log In</a>
+    </div>
+  </div>
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

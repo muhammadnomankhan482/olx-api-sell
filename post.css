@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.header {
+  background: #002f34;
+  padding: 15px;
+  color: #fff;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header .logo img {
+  border-radius: 4px;
+}
+
+.header span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.container {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #002f34;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin: 8px 0 5px;
+  color: #002f34;
+}
+
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #002f34;
+  outline: none;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button, #back {
+  width: 100%;
+  padding: 14px;
+  background: #002f34;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background: #004d53;
+}
+
+#info {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
